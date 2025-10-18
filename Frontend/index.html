@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside>
+            <div class="logo">
+                <h2>Dashboard </h2>
+            </div>
+            <nav>
+                <a href="#" id="nav-dashboard" class="active"><span class="material-icons-sharp">dashboard</span><h3>Dashboard</h3></a>
+                <a href="#" id="nav-campaigns"><span class="material-icons-sharp">list_alt</span><h3>Campaigns</h3></a>
+                <a href="#" id="nav-calendar"><span class="material-icons-sharp">calendar_month</span><h3>Calendar</h3></a>
+                <a href="#" id="nav-analytics"><span class="material-icons-sharp">analytics</span><h3>Analytics</h3></a>
+            </nav>
+        </aside>
+
+        <main>
+            <header>
+                <h1>Campaign Overview</h1>
+                <button id="create-campaign-btn" class="primary-btn">
+                    <span class="material-icons-sharp">add</span> Create Campaign
+                </button>
+            </header>
+
+            <section id="dashboard-view" class="view-section active-view">
+                <div class="stats-cards">
+                    <div id="stat-total-campaigns" class="card"><span class="material-icons-sharp">campaign</span><h3>Total Campaigns</h3><h2>14</h2></div>
+                    <div id="stat-upcoming" class="card"><span class="material-icons-sharp">pending_actions</span><h3>Upcoming</h3><h2>5</h2></div>
+                    <div id="stat-completed" class="card"><span class="material-icons-sharp">task_alt</span><h3>Completed</h3><h2>9</h2></div>
+                    <div id="stat-engagement" class="card"><span class="material-icons-sharp">thumb_up</span><h3>Engagement</h3><h2>3.4%</h2></div>
+                </div>
+                <div class="campaign-list-container">
+                    <h2>Upcoming Campaigns</h2>
+                    <table id="campaign-table">
+                        <thead>
+                            <tr><th>Campaign Name</th><th>Platform</th><th>Scheduled Date</th><th>Status</th><th>Actions</th></tr>
+                        </thead>
+                        <tbody id="campaign-list-body">
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="campaigns-view" class="view-section">
+                <div class="view-header">
+                    <h2>All Campaigns</h2>
+                    <div class="toolbar">
+                        <input type="search" placeholder="Search campaigns...">
+                        <select>
+                            <option value="">Filter by Platform</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="Twitter">Twitter</option>
+                            <option value="LinkedIn">LinkedIn</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="campaign-list-container">
+                    <table>
+                        <thead>
+                            <tr><th>Campaign Name</th><th>Platform</th><th>Scheduled Date</th><th>Status</th><th>Actions</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Holiday Promotion</td><td>Facebook</td><td>20 Oct 2025, 10:00 am</td><td><span class="status scheduled">Scheduled</span></td><td><button class="delete-btn">Delete</button></td></tr>
+                            <tr><td>Winter Collection Launch</td><td>Instagram</td><td>25 Oct 2025, 6:00 pm</td><td><span class="status scheduled">Scheduled</span></td><td><button class="delete-btn">Delete</button></td></tr>
+                            <tr><td>New Partnership</td><td>LinkedIn</td><td>10 Nov 2025, 9:00 am</td><td><span class="status scheduled">Scheduled</span></td><td><button class="delete-btn">Delete</button></td></tr>
+                            <tr><td>'Top 5 SEO Tips' Blog</td><td>Twitter</td><td>22 Aug 2025, 2:00 am</td><td><span class="status published">Published</span></td><td><button class="delete-btn">Delete</button></td></tr>
+                            <tr><td>Mid-Year Sale</td><td>Facebook</td><td>15 Jul 2025, 12:00 pm</td><td><span class="status published">Published</span></td><td><button class="delete-btn">Delete</button></td></tr>
+                            <tr><td>Tech Conference Recap</td><td>LinkedIn</td><td>02 Jun 2025, 3:00 pm</td><td><span class="status published">Published</span></td><td><button class="delete-btn">Delete</button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <section id="calendar-view" class="view-section">
+                <h2>Content Calendar</h2>
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <button class="cal-btn">&lt;</button>
+                        <h3>September 2025</h3>
+                        <button class="cal-btn">&gt;</button>
+                    </div>
+                    <div class="calendar-weekdays">
+                        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="day-cell other-month">25</div><div class="day-cell other-month">26</div><div class="day-cell other-month">27</div><div class="day-cell other-month">28</div><div class="day-cell other-month">29</div><div class="day-cell other-month">30</div><div class="day-cell other-month">31</div>
+                        <div class="day-cell">1</div><div class="day-cell">2</div><div class="day-cell">3</div><div class="day-cell">4</div><div class="day-cell">5</div><div class="day-cell">6</div><div class="day-cell">7</div>
+                        <div class="day-cell">8</div><div class="day-cell">9</div><div class="day-cell">10</div><div class="day-cell has-event-li">11</div><div class="day-cell">12</div><div class="day-cell">13</div><div class="day-cell">14</div>
+                        <div class="day-cell">15</div><div class="day-cell">16</div><div class="day-cell">17</div><div class="day-cell">18</div><div class="day-cell">19</div><div class="day-cell has-event-fb">20</div><div class="day-cell">21</div>
+                        <div class="day-cell">22</div><div class="day-cell">23</div><div class="day-cell current-day">24</div><div class="day-cell has-event-ig">25</div><div class="day-cell">26</div><div class="day-cell">27</div><div class="day-cell">28</div>
+                        <div class="day-cell">29</div><div class="day-cell">30</div><div class="day-cell other-month">1</div><div class="day-cell other-month">2</div><div class="day-cell other-month">3</div><div class="day-cell other-month">4</div><div class="day-cell other-month">5</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="analytics-view" class="view-section">
+                <h2>Performance Analytics</h2>
+                <div class="analytics-grid">
+                    <div class="chart-card">
+                        <h3>Engagement by Platform</h3>
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 60%;"><span class="label">FB</span></div>
+                            <div class="bar" style="height: 85%;"><span class="label">IG</span></div>
+                            <div class="bar" style="height: 40%;"><span class="label">TW</span></div>
+                            <div class="bar" style="height: 75%;"><span class="label">LI</span></div>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Campaign Success Rate</h3>
+                        <div class="pie-chart"></div>
+                        <p>92% Published Successfully</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="campaign-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Schedule a New Campaign</h2>
+            <form id="campaign-form">
+                <div class="form-group"><label for="campaign-name">Campaign Name</label><input type="text" id="campaign-name" required></div>
+                <div class="form-group"><label for="platform">Social Media Platform</label><select id="platform" required><option>Facebook</option><option>Twitter</option><option>Instagram</option><option>LinkedIn</option></select></div>
+                <div class="form-group"><label for="campaign-content">Content</label><textarea id="campaign-content" rows="4" required></textarea></div>
+                <div class="form-group"><label for="schedule-date">Schedule Date & Time</label><input type="datetime-local" id="schedule-date" required></div>
+                <button type="submit" class="primary-btn">Schedule Campaign</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
